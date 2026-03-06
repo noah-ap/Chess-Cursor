@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://b7od8rua8ccn1"]
+
+[ext_resource type="Script" path="res://scripts/chess_board.gd" id="1_hhm0a"]
+[ext_resource type="Script" path="res://scripts/chess_game_manager.gd" id="2_4v2tv"]
+[ext_resource type="Script" path="res://scripts/camera_controller.gd" id="3_camera"]
+[ext_resource type="Shader" path="res://shaders/outline.gdshader" id="4_outline"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_outline"]
+size = Vector2(20, 20)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_outline"]
+render_priority = 0
+shader = ExtResource("4_outline")
+shader_parameter/shadows_enabled = true
+shader_parameter/highlights_enabled = true
+shader_parameter/shadow_strength = 0.4
+shader_parameter/highlight_strength = 0.1
+shader_parameter/highlight_color = Color(1, 1, 1, 1)
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+
+[node name="ChessGame" type="Node3D"]
+
+[node name="ChessBoard" type="Node3D" parent="."]
+script = ExtResource("1_hhm0a")
+
+[node name="Game Manager" type="Node3D" parent="." node_paths=PackedStringArray("chess_board")]
+script = ExtResource("2_4v2tv")
+chess_board = NodePath("../ChessBoard")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+projection = 1
+current = true
+size = 7.5
+near = 0.001
+script = ExtResource("3_camera")
+
+[node name="Postprocess" type="MeshInstance3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.873)
+mesh = SubResource("QuadMesh_outline")
+surface_material_override/0 = SubResource("ShaderMaterial_outline")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, 0.353553, -0.353553, 0, 0.707107, 0.707107, 0.5, -0.612372, 0.612372, 0, 5, 0)
+light_energy = 2.0
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 5, 0)

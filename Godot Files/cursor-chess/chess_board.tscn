@@ -1,0 +1,357 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmdf352amva83"]
+
+[ext_resource type="Shader" path="res://shaders/toon_piece.gdshader" id="1_s7kgu"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_h3817"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f08pl"]
+render_priority = 0
+shader = ExtResource("1_s7kgu")
+shader_parameter/albedo = Color(0.74978, 0.74978, 0.74978, 1)
+shader_parameter/cuts = 8
+shader_parameter/wrap = 0.2
+shader_parameter/shadow_intensity = 0.6
+shader_parameter/highlight_boost = 1.3
+shader_parameter/ambient_strength = 0.3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y53n0"]
+render_priority = 0
+shader = ExtResource("1_s7kgu")
+shader_parameter/albedo = Color(0.497474, 0.497474, 0.497474, 1)
+shader_parameter/cuts = 8
+shader_parameter/wrap = 0.2
+shader_parameter/shadow_intensity = 0.6
+shader_parameter/highlight_boost = 1.3
+shader_parameter/ambient_strength = 0.3
+
+[node name="ChessBoard" type="Node3D"]
+
+[node name="WhiteTile" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 6)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -5)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile2" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -6)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile3" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -7)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile4" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -8)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile5" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -5)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile6" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -6)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile7" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -7)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile8" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -8)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile9" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile10" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -6)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile11" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile12" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -8)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile13" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -5)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile14" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -6)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile15" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -7)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile16" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -8)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile17" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -9)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile18" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -10)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile19" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -11)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile20" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -12)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile21" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -9)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile22" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -10)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile23" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -11)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile24" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -12)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile25" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile26" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -10)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile27" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile28" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -12)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile29" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -9)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile30" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -10)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile31" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -11)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="WhiteTile32" type="MeshInstance3D" parent="WhiteTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -12)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_f08pl")
+
+[node name="BlackTile" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 6)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -5)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile2" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -6)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile3" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -7)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile4" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -8)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile5" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -5)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile6" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -6)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile7" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -7)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile8" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -8)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile9" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile10" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -6)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile11" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile12" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -8)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile13" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -5)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile14" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -6)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile15" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -7)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile16" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -8)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile17" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -9)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile18" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -10)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile19" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -11)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile20" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -12)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile21" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -9)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile22" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -10)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile23" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -11)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile24" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -12)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile25" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile26" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -10)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile27" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile28" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -12)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile29" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -9)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile30" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -10)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile31" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -11)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")
+
+[node name="BlackTile32" type="MeshInstance3D" parent="BlackTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -12)
+mesh = SubResource("BoxMesh_h3817")
+surface_material_override/0 = SubResource("ShaderMaterial_y53n0")

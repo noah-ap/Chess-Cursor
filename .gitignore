@@ -1,0 +1,23 @@
+# Godot
+.godot/
+*.import
+export_presets.cfg
+
+# Java
+*.class
+*.jar
+*.war
+.gradle/
+build/
+out/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+*.swp
+*.swo
+*~
